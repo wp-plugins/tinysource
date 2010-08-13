@@ -15,15 +15,17 @@ This plugin enables users to easily note the source of republished text. It adds
 ATTENTION: This is still an early development version (aka ALPHA), thus use with your own risk. It has the basic functionality, but not many configuration options and some bugs are probably present.
 
 Basic functions:
-*   Allows to create list of possible sources using Custom Post Types functionality;
-*   Creates a meta-box in post editor screen to choose from list of available sources;
-*   Customizable template - you can use your own html and shorttags %title%, %title_attr%, %text%, %img%, %img_h%, %img_w% and %link%;
-*   You can use template tag `<?php tinysource_show(); ?>` to insert plugin output;
+
+* Allows to create list of possible sources using Custom Post Types functionality;
+* Creates a meta-box in post editor screen to choose from list of available sources;
+* Customizable template - you can use your own html and shorttags %title%, %title_attr%, %text%, %img%, %img_h%, %img_w% and %link%;
+* You can use template tag `<?php tinysource_show(); ?>` to insert plugin output;
 
 TO DO:
-*   More customization options
-*   Automatic insertion after post text
-*   Localization
+
+* More customization options
+* Automatic insertion after post text
+* Localization
 
 == Installation ==
 
@@ -38,6 +40,3 @@ TO DO:
 = 0.1 =
 * initial *ALPHA* release
 
-== Frequently Asked Questions ==
-== Upgrade Notice ==
-== Screenshots ==
