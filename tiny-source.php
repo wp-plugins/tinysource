@@ -8,7 +8,7 @@ Plugin Name: tinysource
 Plugin URI: http://studio.tiny.lt/plugins/tinysource
 Description: Simple tool to note text source
 Author: tinyStudio
-Version: 0.1
+Version: 0.2
 Author URI: http://studio.tiny.lt/
 */
 
@@ -59,10 +59,10 @@ function tinysource_select(){
   global $post;
   $custom = get_post_custom($post->ID);
   $list = tinysource_get_sources_list();
-  $source = $custom['tinysource_source'][0];
+  $source = $custom['_tinysource_source'][0];
 ?>
   <p><label><?php _e('Choose text source','tinysource'); ?>:</label><br />
-  <select name="tinysource_source">
+  <select name="_tinysource_source">
 <?php
   foreach ($list as $l) :
 ?>
@@ -92,8 +92,8 @@ function tinysource_save_details(){
 
 function tinysource_save_post(){
   global $post;
-  if ($_POST['tinysource_source']) 
-    update_post_meta($post->ID, "tinysource_source", $_POST["tinysource_source"]);
+  if ($_POST['_tinysource_source']) 
+    update_post_meta($post->ID, "_tinysource_source", $_POST["_tinysource_source"]);
 }
 
 function tinysource_show($arg=null){
@@ -108,11 +108,11 @@ function tinysource_show($arg=null){
   $argument = array_merge($default,$arg);
   $argument['img_size'] = explode(',',$argument['img_size']); 
   $custom = get_post_custom($argument['post']);
-  $source = $custom['tinysource_source'][0];
+  $source = $custom['_tinysource_source'][0];
   $source = tinysource_get($source);
   $tags = array ('%link%','%title_attr%', '%title%','%img%','%img_h%','%img_w%', '%text%');
   if (function_exists('get_post_thumbnail_id'))
-    $img = wp_get_attachment_image_src(get_post_thumbnail_id($custom['tinysource_source'][0]),$argument['img_size']);
+    $img = wp_get_attachment_image_src(get_post_thumbnail_id($custom['_tinysource_source'][0]),$argument['img_size']);
   else $img = array('','','');
   $cont = array (
     $source->custom['link'][0],
@@ -131,7 +131,6 @@ function tinysource_get($id) {
   $ret = $recentPosts->posts[0];
   $ret->custom = get_post_custom($id);
   return $ret;
-;
 }
 
 /*
