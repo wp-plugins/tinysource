@@ -37,6 +37,12 @@ TO DO:
 
 == Changelog ==
 
+= 0.2 = 
+* changed custom field from `tinysource_source` to `_tinysource_source`
+* fixed one typo
+
+
 = 0.1 =
 * initial *ALPHA* release
+
 
