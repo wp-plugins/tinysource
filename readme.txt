@@ -4,7 +4,7 @@ Contributors: ideag
 Tags: text, source, custom-post-type
 Requires at least: 3.0.0
 Tested up to: 3.0.1
-Stable tag: 0.2.2
+Stable tag: 0.2.3
 
 This plugin enables users to easily note the source of republished text. EARLY DEVELOPMENT VERSION. DO NOT USE IN PRODUCTION ENVIRONMENT.
 
